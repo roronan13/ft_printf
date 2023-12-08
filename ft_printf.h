@@ -6,7 +6,10 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 18:58:56 by rpothier          #+#    #+#             */
-/*   Updated: 2023/12/08 18:58:57 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/12/08 19:02:11 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
