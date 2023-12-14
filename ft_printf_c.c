@@ -1,18 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_c.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/08 18:58:56 by rpothier          #+#    #+#             */
-/*   Updated: 2023/12/14 22:48:29 by rpothier         ###   ########.fr       */
+/*   Created: 2023/12/14 22:01:44 by rpothier          #+#    #+#             */
+/*   Updated: 2023/12/14 22:05:12 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-
-#endif
+ft_printf_c()
