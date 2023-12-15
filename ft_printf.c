@@ -6,13 +6,20 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2023/12/15 00:17:27 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/12/15 14:09:32 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "stdio.h"
 
-int	ft_printf(const char *, ...)
+/* int	ft_printf(const char *object, ...)
 {
 	
+} */
+
+int	main()
+{
+	printf("%c\n%d\n%c\n", 'a', 1, 'b');
+	return (0);
 }
