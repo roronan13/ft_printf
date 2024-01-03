@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/04 00:24:30 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/04 00:28:24 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int	parcourir la chaine(va_list, const char*)
 	return nbr
 	
 } */
+
+
 
 int	main()
 {
