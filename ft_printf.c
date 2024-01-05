@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/05 13:23:32 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/05 13:59:46 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int	ft_printf(const char *object, ...)
 	while (object)
 	{
 		if (object[i] == '%')
-		
 	}
 }
 
