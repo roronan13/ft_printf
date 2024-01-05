@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/04 00:28:24 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/05 13:23:32 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,18 @@ int	parcourir la chaine(va_list, const char*)
 	
 } */
 
+int	ft_printf(const char *object, ...)
+{
+	unsigned long int	i;
+	char				a;
 
+	i = 0;
+	while (object)
+	{
+		if (object[i] == '%')
+		
+	}
+}
 
 int	main()
 {
