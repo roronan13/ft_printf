@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/05 16:15:15 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/05 16:40:02 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@
 
 int	ft_printf(const char *object, ...)
 {
-	int		i;
-	char	a;
+	unsigned int	i;
+	char			a;
 
 	i = 0;
 	while (object[i])
