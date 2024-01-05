@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/05 13:59:46 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/05 14:33:12 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ int	parcourir la chaine(va_list, const char*)
 	
 } */
 
+static	ft_sign(object, a)
+{
+	
+}
+
 int	ft_printf(const char *object, ...)
 {
 	unsigned long int	i;
@@ -49,10 +54,18 @@ int	ft_printf(const char *object, ...)
 	while (object)
 	{
 		if (object[i] == '%')
+		{
+			a = object[i + 1];
+			if (a == 'c' || a == 's' || a == 'p' || a == 'd' || a == 'i'
+				|| a == 'u' || a == 'x' || a == 'X' || a == '%')
+			{
+				ft_sign(object, a);
+			}
+		}
 	}
 }
 
-int	main()
+int	main(void)
 {
 	printf("%c\n%d\n%c\n", 'a', 1, 'b');
 	return (0);
