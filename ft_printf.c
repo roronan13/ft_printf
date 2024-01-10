@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 22:38:14 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/10 22:52:33 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 	
 } */
 
-static void	ft_sign(a)
+static int	ft_sign(a)
 {
 	if (a == 'c')
 		ft_printf_c(va_arg(ap, char));
@@ -53,10 +53,12 @@ int	ft_printf(const char *object, ...)
 {
 	unsigned int	i;
 	char			a;
+	unsigned int	nbr;
 
 	va_list(ap);
 	va_start(ap, object);
 	i = 0;
+	nbr = 0;
 	while (object[i])
 	{
 		if (object[i] == '%')
@@ -65,18 +67,23 @@ int	ft_printf(const char *object, ...)
 			if (a == 'c' || a == 's' || a == 'p' || a == 'd' || a == 'i'
 				|| a == 'u' || a == 'x' || a == 'X' || a == '%')
 			{
-				ft_sign(a);
+				nbr = ft_sign(a);
+				i++;
 			}
 		}
 		else
+		{
 			write(1, &object[i], 1);
+			nbr++;
+		}
 		i++;
 	}
 	va_end(ap);
+	return (nbr);
 }
 
 int	main(void)
 {
-	printf("%c\n%d\n%c\n", 'a', 1, 'b');
+	printf("%c\n%d\na\n%c\n", 'a', 1, 'b');
 	return (0);
 }
