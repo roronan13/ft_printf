@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 20:20:22 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/10 20:44:20 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,18 @@
 	
 } */
 
-static	ft_sign(object, a)
+static void	ft_sign(object, a)
 {
 	if (a == 'c')
-		ft_printf_c(object, )
+		ft_printf_c(object, );
 }
 
 int	ft_printf(const char *object, ...)
 {
-	va_list(ap);
 	unsigned int	i;
 	char			a;
 
+	va_list(ap);
 	va_start(ap, object);
 	i = 0;
 	while (object[i])
