@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 22:52:33 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/10 23:09:08 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,14 @@
 	
 } */
 
-static int	ft_sign(a)
+static int	ft_sign(a, nbr)
 {
 	if (a == 'c')
-		ft_printf_c(va_arg(ap, char));
+		nbr += ft_printf_c(va_arg(ap, char));
 	if (a == 's')
-		ft_printf_s(va_arg(ap, *char));
+		nbr += ft_printf_s(va_arg(ap, *char));
 	if (a == 'p')
+	return (nbr);
 }
 
 int	ft_printf(const char *object, ...)
@@ -67,7 +68,7 @@ int	ft_printf(const char *object, ...)
 			if (a == 'c' || a == 's' || a == 'p' || a == 'd' || a == 'i'
 				|| a == 'u' || a == 'x' || a == 'X' || a == '%')
 			{
-				nbr = ft_sign(a);
+				nbr = ft_sign(a, nbr);
 				i++;
 			}
 		}
