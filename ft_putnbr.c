@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_d.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 23:24:56 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 23:58:49 by rpothier         ###   ########.fr       */
+/*   Created: 2024/01/10 23:41:30 by rpothier          #+#    #+#             */
+/*   Updated: 2024/01/10 23:47:19 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_d(int n)
+void	ft_putnbr(int n)
 {
-	char	*nbr_size;
+	char	a;
 	
-	nbr_size = ft_itoa(n);
-	ft_putnbr(n);
-	return (ft_strlen(nbr_size));
+	if (n == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	else if (n < 0)
+	{
+		n *= -1;
+		write(1, "-", 1);
+	}
+	if (n <= 9)
+	{
+		a = 48 + n;
+		write(1, &a, 1);
+	}
+	else
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
 }
