@@ -6,18 +6,12 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 23:09:08 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/10 23:17:33 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "stdio.h"
-
-/* int cestquelpourcentbebe()
-{
-	cest un c?
-		appel la fonction qui gere c
-} */
 
 /* int	parcourir la chaine(va_list, const char*)
 {
