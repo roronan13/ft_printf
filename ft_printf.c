@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 23:17:33 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/10 23:24:25 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ static int	ft_sign(a, nbr)
 	if (a == 's')
 		nbr += ft_printf_s(va_arg(ap, *char));
 	if (a == 'p')
+	if (a == 'd')
+		nbr += ft_printf_d(va_arg(ap, int));
 	return (nbr);
 }
 
