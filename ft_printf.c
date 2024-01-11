@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/11 17:32:12 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/11 19:01:07 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,27 +34,31 @@
 	
 } */
 
-static void	ft_check_sign(char a, int *nbr, int *i, va_list(ap))
+static void	ft_check_sign(char a, unsigned int *nbr, int *i, va_list ap)
 {
 	//unsigned int	nbr;
 	
 	if (a == 'c' || a == 's' || a == 'p' || a == 'd' || a == 'i'
 		|| a == 'u' || a == 'x' || a == 'X' || a == '%')
 		{
-			nbr = ft_sign(a, nbr);
+			nbr = ft_sign(a, nbr, ap);
 			i++;
 		}
 }
 
-static int	ft_sign(a, nbr)
+static int	ft_sign(char a, unsigned int nbr, va_list ap)
 {
 	if (a == 'c')
 		nbr += ft_printf_c(va_arg(ap, char));
 	if (a == 's')
 		nbr += ft_printf_s(va_arg(ap, *char));
 	if (a == 'p')
+		nbr += ft_printf_p(va_arg(ap, *void));
 	if (a == 'd')
 		nbr += ft_printf_d(va_arg(ap, int));
+	if (a == 'i')
+		nbr += ft_printf_i(va_arg(ap, int));
+	t
 	return (nbr);
 }
 
