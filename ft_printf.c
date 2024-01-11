@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 23:24:25 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/11 17:32:12 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,18 @@
 	return nbr
 	
 } */
+
+static void	ft_check_sign(char a, int *nbr, int *i, va_list(ap))
+{
+	//unsigned int	nbr;
+	
+	if (a == 'c' || a == 's' || a == 'p' || a == 'd' || a == 'i'
+		|| a == 'u' || a == 'x' || a == 'X' || a == '%')
+		{
+			nbr = ft_sign(a, nbr);
+			i++;
+		}
+}
 
 static int	ft_sign(a, nbr)
 {
@@ -61,12 +73,7 @@ int	ft_printf(const char *object, ...)
 		if (object[i] == '%')
 		{
 			a = object[i + 1];
-			if (a == 'c' || a == 's' || a == 'p' || a == 'd' || a == 'i'
-				|| a == 'u' || a == 'x' || a == 'X' || a == '%')
-			{
-				nbr = ft_sign(a, nbr);
-				i++;
-			}
+			ft_check_sign(a, &nbr, &i, ap);
 		}
 		else
 		{
