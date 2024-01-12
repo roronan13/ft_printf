@@ -6,14 +6,14 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 22:01:44 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 22:48:10 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:26:08 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_c(char c)
+int	ft_printf_c(int n)
 {
-	write(1, &c, 1);
+	write(1, &n, 1);
 	return (1);
 }

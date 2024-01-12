@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 18:58:56 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/12 16:23:07 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:14:31 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,12 @@
 # include <stdarg.h>
 # include <stdint.h>
 
-typedef uintptr_t;
+//typedef intptr_t;
 
-
+int	ft_printf(const char *object, ...);
+int	ft_printf_c(int c);
+int	ft_printf_d(int n);
+int	ft_printf_p(void *ptr);
+int	ft_printf_s(char *s);
 
 #endif
