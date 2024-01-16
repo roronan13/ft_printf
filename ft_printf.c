@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/12 18:38:02 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:28:12 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,12 @@ static int	ft_sign(char a, va_list ap)
 {
 	int	nbr;
 
+	nbr = 0;
 	if (a == 'c')
-		nbr +=(ft_printf_c(va_arg(ap, int)));
-	/* if (a == 's')
-		nbr += ft_printf_s(va_arg(ap, *char));
-	if (a == 'p')
+		nbr += ft_printf_c(va_arg(ap, int));
+	if (a == 's')
+		nbr += ft_printf_s(va_arg(ap, char*));
+/* 	if (a == 'p')
 		nbr += ft_printf_p(va_arg(ap, *void)); */
 	/* if (a == 'd')
 		nbr += ft_printf_d(va_arg(ap, int)); */
@@ -62,7 +63,7 @@ static int	ft_sign(char a, va_list ap)
 		nbr += ft_printf_i(va_arg(ap, int));
 	if (a == 'u')
 		nbr += ft_printf_u(va_arg(ap, unsigned int)); */
-	//return (nbr);
+	return (nbr);
 }
 
 int	ft_printf(const char *format, ...)
@@ -104,8 +105,8 @@ int	main(void)
 	c = 122; //z
 	a = printf("printf: %d\n", printf("oui %c\n\t", c)); //checker longueur vraie printf
 	b = printf("ronanf: %d\n", ft_printf("non %c\n\t", c)); //checker longueur ft_printf
-	ft_printf("petit test %c\n", c);
-	printf("petit test %c\n", c);
+	/* ft_printf("petit test %c\n", c);
+	printf("petit test %c\n", c); */
 	printf("len printf: %d\nlen ronan %d\n", a, b);
 	return (0);
 }
