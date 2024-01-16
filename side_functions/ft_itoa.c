@@ -6,11 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 23:52:57 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/16 18:57:30 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/16 19:57:39 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 static int	ft_size(int n)
 {

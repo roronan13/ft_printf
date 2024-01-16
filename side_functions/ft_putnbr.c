@@ -6,11 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 23:41:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/16 18:57:13 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/16 19:57:36 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 void	ft_putnbr(int n)
 {

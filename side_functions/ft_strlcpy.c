@@ -6,11 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:02:24 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/16 17:02:45 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/16 19:57:28 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
