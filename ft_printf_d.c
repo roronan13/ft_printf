@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 23:24:56 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 23:58:49 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/16 18:57:47 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@ int	ft_printf_d(int n)
 	
 	nbr_size = ft_itoa(n);
 	ft_putnbr(n);
-	return (ft_strlen(nbr_size));
+	n = ft_strlen(nbr_size);
+	free(nbr_size);
+	return (n);
 }

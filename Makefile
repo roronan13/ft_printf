@@ -4,18 +4,11 @@ SRCS	=	ft_printf.c\
 			ft_printf_c.c\
 			ft_printf_s.c\
 			ft_printf_p.c\
-			ft_printf_d.c
-
-SRCS_SIDE	=	ft_itoa.c\
-				ft_putnbr.c\
-				ft_strlen.c\
-				ft_strlcpy.c
-
-SIDE_PATH	=	side_functions
-
-SRCS_SIDE	:= 	$(addprefix $(SIDE_PATH)/, $(SRCS_SIDE))
-
-SRCS		+=	$(SRCS_SIDE)
+			ft_printf_d.c\
+			side_functions/ft_itoa.c\
+			side_functions/ft_putnbr.c\
+			side_functions/ft_strlen.c\
+			side_functions/ft_strlcpy.c
 
 OBJS	=	$(SRCS:.c=.o)
 
