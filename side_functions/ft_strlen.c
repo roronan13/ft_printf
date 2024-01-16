@@ -6,11 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 19:29:21 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 23:06:21 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:57:32 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_strlen(const char *s)
 {

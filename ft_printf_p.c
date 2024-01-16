@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 11:47:12 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/12 11:48:13 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:32:04 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int	ft_printf_p(void *ptr)
 {
-	
+	ptr = malloc(sizeof(char) * 1);
+
+	return 1;
 }

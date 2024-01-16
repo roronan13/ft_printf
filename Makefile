@@ -4,25 +4,28 @@ SRCS	=	ft_printf.c\
 			ft_printf_c.c\
 			ft_printf_s.c\
 			ft_printf_p.c\
-			ft_printf_d.c\
-			ft_printf_i.c\
-			ft_printf_u.c\
-			ft_printf_x.c\
-			ft_printf_X.c\
-			ft_printf_%.c\
-			ft_itoa.c\
-			ft_putnbr.c\
-			ft_strlen.c
+			ft_printf_d.c
+
+SRCS_SIDE	=	ft_itoa.c\
+				ft_putnbr.c\
+				ft_strlen.c\
+				ft_strlcpy.c
+
+SIDE_PATH	=	side_functions
+
+SRCS_SIDE	:= 	$(addprefix $(SIDE_PATH)/, $(SRCS_SIDE))
+
+SRCS		+=	$(SRCS_SIDE)
 
 OBJS	=	$(SRCS:.c=.o)
 
 CC		=	cc
 
-CFLAGS	=	-Wall -Wextra -Werror
+INCLUDES_PATH	=	includes
+
+CFLAGS	=	-Wall -Wextra -Werror -I$(INCLUDES_PATH)
 
 RM		=	rm -rf
-
-CLEAN	=	clean
 
 all		:	$(NAME)
 

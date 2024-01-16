@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 23:52:57 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/10 23:55:32 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:59:36 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_size(int n)
 	return (i + 1);
 }
 
-static void	ft_putnbr(char *ptr, int n)
+static void	ft_putnbr_itoa(char *ptr, int n)
 {
 	int	i;
 
@@ -48,8 +48,8 @@ static void	ft_putnbr(char *ptr, int n)
 	}
 	else
 	{
-		ft_putnbr(ptr, n / 10);
-		ft_putnbr(ptr, n % 10);
+		ft_putnbr_itoa(ptr, n / 10);
+		ft_putnbr_itoa(ptr, n % 10);
 	}
 }
 
@@ -67,7 +67,7 @@ char	*ft_itoa(int n)
 		ft_strlcpy(ptr, "-2147483648", 12);
 		return (ptr);
 	}
-	ft_putnbr(ptr, n);
+	ft_putnbr_itoa(ptr, n);
 	ptr[size - 1] = '\0';
 	return (ptr);
 }

@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/08 18:58:56 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/16 16:29:45 by rpothier         ###   ########.fr       */
+/*   Created: 2024/01/16 17:02:24 by rpothier          #+#    #+#             */
+/*   Updated: 2024/01/16 17:02:45 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdint.h>
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+	size_t	i;
 
-//typedef intptr_t;
-
-int		ft_printf(const char *object, ...);
-int		ft_printf_c(int c);
-int		ft_printf_d(int n);
-int		ft_printf_p(void *ptr);
-int		ft_printf_s(char *s);
-int		ft_strlen(const char *s);
-void	ft_putnbr(int n);
-char	*ft_itoa(int n);
-
-#endif
+	i = 0;
+	if (dstsize != 0)
+	{
+		while (src[i] && i < dstsize - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (ft_strlen(src));
+}
