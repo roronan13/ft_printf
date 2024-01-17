@@ -6,17 +6,14 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:34:09 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/17 18:19:11 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/17 18:42:03 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	ft_putnbr_hexa(int n, char *base)
+int	ft_putnbr_hexa(int n, char *base, int i)
 {
-	int	i;
-
-	i = 0;
 	if (n == -2147483648)
 	{
 		write(1, "-80000000", 9);
@@ -26,6 +23,7 @@ int	ft_putnbr_hexa(int n, char *base)
 	{
 		n *= -1;
 		write(1, '-', 1);
+		i++;
 	}
 	if (n <= 15)
 	{
@@ -34,8 +32,9 @@ int	ft_putnbr_hexa(int n, char *base)
 	}
 	else
 	{
-		ft_putnbr_base(n / 16, base);
-		ft_putnbr_base(n % 16, base);
+		ft_putnbr_hexa(n / 16, base, i);
+		ft_putnbr_hexa(n % 16, base, i);
 	}
+	
 	return (i);
 }
