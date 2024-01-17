@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/17 20:32:26 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/17 20:48:51 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,13 +101,13 @@ int	main(void)
 	int		a;
 	int		b;
 	int		d;
-	int		x;
 	int		y;
 	char	*s;
 	void	*p;
+	int 	x;
 	
 	//ptr = malloc(sizeof(int) * 100);
-	d = 155555;
+	//d = 155555;
 	/*c = 122; //z
 	a = printf("printf: %d\n", printf("oui %c\n", c)); //checker longueur vraie printf
 	b = printf("ronanf: %d\n", ft_printf("non %c\n", c)); //checker longueur ft_printf
@@ -128,7 +128,12 @@ int	main(void)
 	ft_printf("roro %s\n", s);
 	printf("%d\n", x);
 	printf("riri %d\n", y); */
-	printf("vraie : %p\n", p);
-	ft_printf("moi : %p\n", p);
+	/* printf("vraie : %p\n", p);
+	ft_printf("moi : %p\n", p); */
+	x = 300;
+	printf("vraie : %x\n", x);
+	ft_printf("moi : %x\n", x);
+	ft_printf("%d\n", printf("vraie : %x\n", x));
+	ft_printf("%d\n", ft_printf("moi : %x\n", x));
 	return (0);
 }
