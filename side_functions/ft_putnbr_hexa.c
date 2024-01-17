@@ -6,11 +6,12 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:34:09 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/17 18:42:03 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/17 19:00:47 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+#include <unistd.h>
 
 int	ft_putnbr_hexa(int n, char *base, int i)
 {
@@ -32,9 +33,13 @@ int	ft_putnbr_hexa(int n, char *base, int i)
 	}
 	else
 	{
-		ft_putnbr_hexa(n / 16, base, i);
-		ft_putnbr_hexa(n % 16, base, i);
+		i += ft_putnbr_hexa(n / 16, base, i);
+		i += ft_putnbr_hexa(n % 16, base, i);
 	}
-	
 	return (i);
+}
+
+int	main()
+{
+	ft_putnbr_hexa(300, "0123456789abcdef", 0);
 }
