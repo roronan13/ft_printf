@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/17 11:50:31 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:20:46 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,20 +101,27 @@ int	main(void)
 	int		d;
 	int		x;
 	int		y;
+	char	*s;
 	
 	//ptr = malloc(sizeof(int) * 100);
 	d = 155555;
 	c = 122; //z
-	a = printf("printf: %d\n", printf("oui %c\n\t", c)); //checker longueur vraie printf
-	b = printf("ronanf: %d\n", ft_printf("non %c\n\t", c)); //checker longueur ft_printf
-	/* ft_printf("petit test %c\n", c);
-	printf("petit test %c\n", c); */
+	a = printf("printf: %d\n", printf("oui %c\n", c)); //checker longueur vraie printf
+	b = printf("ronanf: %d\n", ft_printf("non %c\n", c)); //checker longueur ft_printf
+/* 	ft_printf("petit test %c\n", c);
+	printf("petit test %c\n", c);
 	printf("len printf: %d\nlen ronan %d\n", a, b);
-	x = printf("allez%d\n", d);
-	y = ft_printf("allez%d\n", d);
 	printf("%d\n", d);
 	ft_printf("%d\n", d);
 	printf("%d\n", x);
-	printf("%d\n", y);
+	printf("%d\n", y); */
+	//s = "\x09";
+/* 	s = "Allez";
+	x = printf("i/ Eh-%s-allez\n", s);
+	y = ft_printf("l/ Eh-%s-allez\n", s);
+	printf("%s\n", s);
+	ft_printf("roro %s\n", s);
+	printf("%d\n", x);
+	ft_printf("riri %d\n", y); */
 	return (0);
 }
