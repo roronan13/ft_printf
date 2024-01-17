@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:34:09 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/17 20:28:52 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/17 21:09:10 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_putnbr_hexa(int n, char *base_hexa)
+int	ft_putnbr_hexa(int n, char *base)
 {
 	int	i;
 
@@ -32,13 +32,13 @@ int	ft_putnbr_hexa(int n, char *base_hexa)
 	}
 	if (n <= 15)
 	{
-		write(1, &base_hexa[n], 1);
+		write(1, &base[n], 1);
 		i = 1;
 	}
 	else
 	{
-		i += ft_putnbr_hexa(n / 16, base_hexa);
-		i += ft_putnbr_hexa(n % 16, base_hexa);
+		i += ft_putnbr_hexa(n / 16, base);
+		i += ft_putnbr_hexa(n % 16, base);
 	}
 	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 18:58:56 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/17 20:35:00 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/17 21:07:19 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int		ft_printf_s(char *s);
 int		ft_printf_p(void *ptr);
 int		ft_printf_d_i(int n);
 int		ft_printf_x(int n);
+int		ft_printf_X(int n);
 int		ft_strlen(const char *s);
 void	ft_putnbr(int n);
 char	*ft_itoa(int n);
