@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_hexa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:34:09 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/17 17:45:26 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/17 18:19:11 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	ft_putnbr_base(int n, char *base)
+int	ft_putnbr_hexa(int n, char *base)
 {
-	int	size_base;
+	int	i;
 
-	size_base = ft_strlen(base);
+	i = 0;
 	if (n == -2147483648)
 	{
 		write(1, "-80000000", 9);
@@ -27,5 +27,15 @@ int	ft_putnbr_base(int n, char *base)
 		n *= -1;
 		write(1, '-', 1);
 	}
-	if ()
+	if (n <= 15)
+	{
+		write(1, &base[n], 1);
+		i++;
+	}
+	else
+	{
+		ft_putnbr_base(n / 16, base);
+		ft_putnbr_base(n % 16, base);
+	}
+	return (i);
 }
