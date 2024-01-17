@@ -5,6 +5,7 @@ SRCS	=	ft_printf.c\
 			ft_printf_s.c\
 			ft_printf_p.c\
 			ft_printf_d_i.c\
+			ft_printf_x.c\
 			side_functions/ft_itoa.c\
 			side_functions/ft_putnbr.c\
 			side_functions/ft_strlen.c\
