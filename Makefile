@@ -9,7 +9,8 @@ SRCS	=	ft_printf.c\
 			side_functions/ft_itoa.c\
 			side_functions/ft_putnbr.c\
 			side_functions/ft_strlen.c\
-			side_functions/ft_strlcpy.c
+			side_functions/ft_strlcpy.c\
+			side_functions/ft_putnbr_hexa.c
 
 OBJS	=	$(SRCS:.c=.o)
 
