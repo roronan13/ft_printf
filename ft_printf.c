@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/16 19:54:09 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/17 11:50:31 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,16 +52,14 @@ static int	ft_sign(char a, va_list ap)
 
 	nbr = 0;
 	if (a == 'c')
-		nbr += ft_printf_c(va_arg(ap, int));
+		nbr = ft_printf_c(va_arg(ap, int));
 	if (a == 's')
-		nbr += ft_printf_s(va_arg(ap, char*));
+		nbr = ft_printf_s(va_arg(ap, char*));
 /* 	if (a == 'p')
 		nbr += ft_printf_p(va_arg(ap, *void)); */
-	if (a == 'd')
-		nbr += ft_printf_d(va_arg(ap, int));
-	/* if (a == 'i')
-		nbr += ft_printf_i(va_arg(ap, int));
-	if (a == 'u')
+	if (a == 'd' || a == 'i')
+		nbr = ft_printf_d_i(va_arg(ap, int));
+	/*if (a == 'u')
 		nbr += ft_printf_u(va_arg(ap, unsigned int)); */
 	return (nbr);
 }
@@ -100,13 +98,23 @@ int	main(void)
 	char	c;
 	int		a;
 	int		b;
+	int		d;
+	int		x;
+	int		y;
 	
 	//ptr = malloc(sizeof(int) * 100);
+	d = 155555;
 	c = 122; //z
 	a = printf("printf: %d\n", printf("oui %c\n\t", c)); //checker longueur vraie printf
 	b = printf("ronanf: %d\n", ft_printf("non %c\n\t", c)); //checker longueur ft_printf
 	/* ft_printf("petit test %c\n", c);
 	printf("petit test %c\n", c); */
 	printf("len printf: %d\nlen ronan %d\n", a, b);
+	x = printf("allez%d\n", d);
+	y = ft_printf("allez%d\n", d);
+	printf("%d\n", d);
+	ft_printf("%d\n", d);
+	printf("%d\n", x);
+	printf("%d\n", y);
 	return (0);
 }
