@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:34:09 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/17 19:00:47 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/17 19:03:38 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_putnbr_hexa(int n, char *base, int i)
 	else if (n < 0)
 	{
 		n *= -1;
-		write(1, '-', 1);
+		write(1, "-", 1);
 		i++;
 	}
 	if (n <= 15)
