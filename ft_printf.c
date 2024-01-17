@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/17 12:20:46 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/17 13:06:05 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,20 @@
 /* int	ft_printf(const char *format, ...)
 {
 	va_list arguments
-	int nbr
+	int local_nbr
 	va_start()
-	nbr = parcourir la chaine
+	local_nbr = parcourir la chaine
 	va_end
-	return nbr
+	return local_nbr
 	
 } */
 
-/* static void	ft_check_sign(char a, int *nbr, int *i, va_list ap)
+/* static void	ft_check_sign(char a, int *local_nbr, int *i, va_list ap)
 {
 	if (a == 'c' || a == 's' || a == 'p' || a == 'd' || a == 'i'
 		|| a == 'u' || a == 'x' || a == 'X' || a == '%')
 	{
-		nbr = ft_sign(a, nbr, ap);
+		local_nbr = ft_sign(a, local_nbr, ap);
 		i++;
 	}
 	return ;
@@ -48,49 +48,49 @@
 
 static int	ft_sign(char a, va_list ap)
 {
-	int	nbr;
+	int	local_nbr;
 
-	nbr = 0;
+	local_nbr = 0;
 	if (a == 'c')
-		nbr = ft_printf_c(va_arg(ap, int));
+		local_nbr = ft_printf_c(va_arg(ap, int));
 	if (a == 's')
-		nbr = ft_printf_s(va_arg(ap, char*));
-/* 	if (a == 'p')
-		nbr += ft_printf_p(va_arg(ap, *void)); */
+		local_nbr = ft_printf_s(va_arg(ap, char*));
+	if (a == 'p')
+		local_nbr += ft_printf_p(va_arg(ap, void*));
 	if (a == 'd' || a == 'i')
-		nbr = ft_printf_d_i(va_arg(ap, int));
+		local_nbr = ft_printf_d_i(va_arg(ap, int));
 	/*if (a == 'u')
-		nbr += ft_printf_u(va_arg(ap, unsigned int)); */
-	return (nbr);
+		local_nbr += ft_printf_u(va_arg(ap, unsigned int)); */
+	return (local_nbr);
 }
 
 int	ft_printf(const char *format, ...)
 {
 	unsigned int	i;
 	char			a;
-	int				nbr;
+	int				global_nbr;
 	va_list			ap;
 
 	va_start(ap, format);
 	i = 0;
-	nbr = 0;
+	global_nbr = 0;
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			a = format[i + 1];
-			nbr += ft_sign(a, ap);
+			global_nbr += ft_sign(a, ap);
 			i++;
 		}
 		else
 		{
 			write(1, &format[i], 1);
-			nbr++;
+			global_nbr++;
 		}
 		i++;
 	}
 	va_end(ap);
-	return (nbr);
+	return (global_nbr);
 }
 
 int	main(void)
@@ -105,23 +105,25 @@ int	main(void)
 	
 	//ptr = malloc(sizeof(int) * 100);
 	d = 155555;
-	c = 122; //z
+	/*c = 122; //z
 	a = printf("printf: %d\n", printf("oui %c\n", c)); //checker longueur vraie printf
 	b = printf("ronanf: %d\n", ft_printf("non %c\n", c)); //checker longueur ft_printf
-/* 	ft_printf("petit test %c\n", c);
+	ft_printf("petit test %c\n", c);
 	printf("petit test %c\n", c);
-	printf("len printf: %d\nlen ronan %d\n", a, b);
-	printf("%d\n", d);
-	ft_printf("%d\n", d);
-	printf("%d\n", x);
-	printf("%d\n", y); */
+	printf("len printf: %d\nlen ronan %d\n", a, b);*/
+	x = printf("%i\n", d);
+	y = ft_printf("%i\n", d);
+	printf("%i\n", d);
+	ft_printf("%i\n", d);
+	printf("%i\n", x);
+	printf("%i\n", y);
 	//s = "\x09";
-/* 	s = "Allez";
+	/* s = "Allez";
 	x = printf("i/ Eh-%s-allez\n", s);
 	y = ft_printf("l/ Eh-%s-allez\n", s);
 	printf("%s\n", s);
 	ft_printf("roro %s\n", s);
 	printf("%d\n", x);
-	ft_printf("riri %d\n", y); */
+	printf("riri %d\n", y); */
 	return (0);
 }
