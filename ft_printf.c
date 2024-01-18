@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/18 21:27:38 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/18 21:34:01 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int	ft_printf(const char *format, ...)
 	return (global_nbr);
 }
 
-/* int	main(void)
+int	main(void)
 {
 	char	c;
 	int		a;
@@ -112,7 +112,7 @@ int	ft_printf(const char *format, ...)
 	
 	//ptr = malloc(sizeof(int) * 100);
 	//d = 155555;
-	c = 122; //z
+	/*c = 122; //z
 	a = printf("printf: %d\n", printf("oui %c\n", c)); //checker longueur vraie printf
 	b = printf("ronanf: %d\n", ft_printf("non %c\n", c)); //checker longueur ft_printf
 	ft_printf("petit test %c\n", c);
@@ -138,6 +138,10 @@ int	ft_printf(const char *format, ...)
 	printf("vraie 1 : %X\n", x);
 	ft_printf("moi 1 : %X\n", x);
 	printf("%d\n", printf("vraie : %X\n", x));
-	printf("%d\n", ft_printf("moi : %X\n", x));
+	printf("%d\n", ft_printf("moi : %X\n", x));*/
+	printf("vraie 1 : %%\n");
+	ft_printf("moi 1 : %%\n");
+	printf("%d\n", printf("vraie : %%\n"));
+	printf("%d\n", ft_printf("moi : %%\n"));
 	return (0);
-} */
+}
