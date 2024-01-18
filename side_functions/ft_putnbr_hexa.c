@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:34:09 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/18 18:52:43 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/18 18:58:17 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_putnbr_hexa(unsigned int n, char *base)
 	int	i;
 
 	i = 0;
-	if (n == -2147483648)
+	/* if (n == -2147483648)
 	{
 		write(1, "-80000000", 9);
 		return (9);
@@ -29,7 +29,7 @@ int	ft_putnbr_hexa(unsigned int n, char *base)
 		n *= -1;
 		write(1, "-", 1);
 		i = 1;
-	}
+	} */
 	if (n <= 15)
 	{
 		write(1, &base[n], 1);
