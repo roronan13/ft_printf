@@ -6,34 +6,39 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 23:41:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/16 19:57:36 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/18 22:22:19 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	ft_putnbr(int n)
+int	ft_putnbr(int n)
 {
 	char	a;
+	int		i;
 	
-	if (n == -2147483648)
+	i = 0;
+	/* if (n == -2147483648)
 	{
 		write(1, "-2147483648", 11);
-		return ;
-	}
-	else if (n < 0)
+		return (11);
+	} */
+	if (n < 0)
 	{
 		n *= -1;
 		write(1, "-", 1);
+		i++;
 	}
 	if (n <= 9)
 	{
 		a = 48 + n;
 		write(1, &a, 1);
+		i = 1;
 	}
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		i += ft_putnbr(n / 10);
+		i += ft_putnbr(n % 10);
 	}
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/18 21:34:01 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/18 22:18:22 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,9 +139,9 @@ int	main(void)
 	ft_printf("moi 1 : %X\n", x);
 	printf("%d\n", printf("vraie : %X\n", x));
 	printf("%d\n", ft_printf("moi : %X\n", x));*/
-	printf("vraie 1 : %%\n");
-	ft_printf("moi 1 : %%\n");
-	printf("%d\n", printf("vraie : %%\n"));
-	printf("%d\n", ft_printf("moi : %%\n"));
+	printf("vraie 1 : %d\n", -50);
+	ft_printf("moi 1 : %d\n", -50);
+	printf("%d\n", printf("vraie : %d\n", -50));
+	printf("%d\n", ft_printf("moi : %d\n", -50));
 	return (0);
 }
