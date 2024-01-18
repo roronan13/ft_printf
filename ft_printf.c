@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/18 18:48:37 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/18 18:56:47 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,7 @@ int	main(void)
 	printf("riri %d\n", y); */
 	/* printf("vraie : %p\n", p);
 	ft_printf("moi : %p\n", p); */
-	x = -1269;
+	x = -1000;
 	printf("vraie 1 : %X\n", x);
 	ft_printf("moi 1 : %X\n", x);
 	printf("%d\n", printf("vraie : %X\n", x));
