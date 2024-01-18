@@ -6,13 +6,13 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 15:19:29 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/17 20:30:57 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/18 18:49:18 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
-int	ft_printf_x(int n)
+int	ft_printf_x(unsigned int n)
 {
 	int		nbr;
 	char	*base_hexa;
