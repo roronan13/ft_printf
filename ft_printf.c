@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/18 22:18:22 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/18 22:29:04 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int	ft_printf(const char *format, ...)
 	return (global_nbr);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	c;
 	int		a;
@@ -108,7 +108,7 @@ int	main(void)
 	int		y;
 	char	*s;
 	void	*p;
-	int 	x;
+	int 	x; */
 	
 	//ptr = malloc(sizeof(int) * 100);
 	//d = 155555;
@@ -139,9 +139,9 @@ int	main(void)
 	ft_printf("moi 1 : %X\n", x);
 	printf("%d\n", printf("vraie : %X\n", x));
 	printf("%d\n", ft_printf("moi : %X\n", x));*/
-	printf("vraie 1 : %d\n", -50);
+/* 	printf("vraie 1 : %d\n", -50);
 	ft_printf("moi 1 : %d\n", -50);
 	printf("%d\n", printf("vraie : %d\n", -50));
 	printf("%d\n", ft_printf("moi : %d\n", -50));
 	return (0);
-}
+} */
