@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/18 19:02:08 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/18 21:27:38 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ static int	ft_sign(char a, va_list ap)
 		local_nbr = ft_printf_X(va_arg(ap, unsigned int));
 	/*if (a == 'u')
 		local_nbr = ft_printf_u(va_arg(ap, unsigned int)); */
+	if (a == '%')
+		local_nbr = ft_printf_percent();
 	return (local_nbr);
 }
 

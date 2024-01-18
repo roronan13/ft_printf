@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 18:58:56 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/18 18:55:47 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/18 21:23:13 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int		ft_printf_p(void *ptr);
 int		ft_printf_d_i(int n);
 int		ft_printf_x(unsigned int n);
 int		ft_printf_X(unsigned int n);
+int		ft_printf_percent(void);
 int		ft_strlen(const char *s);
 void	ft_putnbr(int n);
 char	*ft_itoa(int n);
