@@ -5,6 +5,7 @@ SRCS	=	ft_printf.c\
 			ft_printf_s.c\
 			ft_printf_p.c\
 			ft_printf_d_i.c\
+			ft_printf_u.c\
 			ft_printf_x.c\
 			ft_printf_X.c\
 			ft_printf_percent.c\
@@ -12,7 +13,8 @@ SRCS	=	ft_printf.c\
 			side_functions/ft_putnbr.c\
 			side_functions/ft_strlen.c\
 			side_functions/ft_strlcpy.c\
-			side_functions/ft_putnbr_hexa.c
+			side_functions/ft_putnbr_hexa.c\
+			side_functions/ft_putnbr_unsigned.c
 
 OBJS	=	$(SRCS:.c=.o)
 
