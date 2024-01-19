@@ -6,11 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/19 11:13:28 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/19 11:23:27 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 #include "stdio.h"
 //#include "stdlib.h"
 
@@ -54,17 +54,17 @@ static int	ft_sign(char a, va_list ap)
 	if (a == 'c')
 		local_nbr = ft_printf_c(va_arg(ap, int));
 	if (a == 's')
-		local_nbr = ft_printf_s(va_arg(ap, char*));
+		local_nbr = ft_printf_s(va_arg(ap, char *));
 	if (a == 'p')
-		local_nbr = ft_printf_p(va_arg(ap, void*));
+		local_nbr = ft_printf_p(va_arg(ap, void *));
 	if (a == 'd' || a == 'i')
 		local_nbr = ft_printf_d_i(va_arg(ap, int));
 	if (a == 'u')
 		local_nbr = ft_printf_u(va_arg(ap, unsigned int));
 	if (a == 'x')
-		local_nbr = ft_printf_x(va_arg(ap, unsigned int));
+		local_nbr = ft_printf_x_low(va_arg(ap, unsigned int));
 	if (a == 'X')
-		local_nbr = ft_printf_X(va_arg(ap, unsigned int));
+		local_nbr = ft_printf_x_up(va_arg(ap, unsigned int));
 	if (a == '%')
 		local_nbr = ft_printf_percent();
 	return (local_nbr);

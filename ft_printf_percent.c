@@ -6,11 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 21:06:56 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/18 21:34:44 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/19 11:23:48 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_printf_percent(void)
 {

@@ -6,11 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 22:01:44 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/18 21:30:21 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/19 11:24:00 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_printf_c(int n)
 {

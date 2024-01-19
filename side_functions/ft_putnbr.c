@@ -6,23 +6,18 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 23:41:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/18 22:22:19 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/19 11:26:18 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_putnbr(int n)
 {
 	char	a;
 	int		i;
-	
+
 	i = 0;
-	/* if (n == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return (11);
-	} */
 	if (n < 0)
 	{
 		n *= -1;
