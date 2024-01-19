@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:34:09 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/19 11:35:36 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/19 13:25:29 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_putnbr_hexa(unsigned int n, char *base)
+int	ft_putnbr_hexa(unsigned long int n, char *base)
 {
 	int	i;
 

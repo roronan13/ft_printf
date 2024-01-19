@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 11:47:12 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/19 12:03:28 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/19 13:13:19 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_printf_p(void *ptr)
 {
-	unsigned int	n;
-	char			*base_hexa;
-	int				nbr;
+	unsigned long int	n;
+	char				*base_hexa;
+	int					nbr;
 
-	n = (unsigned int)ptr;
+	n = (unsigned long int)ptr;
 	base_hexa = "0123456789abcdef";
 	write(1, "0x", 2);
 	nbr = ft_putnbr_hexa(n, base_hexa);

@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 18:58:56 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/19 11:36:43 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/19 13:26:05 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int		ft_printf_percent(void);
 int		ft_strlen(const char *s);
 int		ft_putnbr(int n);
 int		ft_putnbr_unsigned(unsigned int n);
-int		ft_putnbr_hexa(unsigned int n, char *base_hexa);
+int		ft_putnbr_hexa(unsigned long int n, char *base_hexa);
 
 #endif

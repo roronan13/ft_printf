@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/19 11:50:48 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/19 13:15:26 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,6 +145,11 @@ int	main(void)
 	printf("%d\n", ft_printf("moi : %d\n", -50));
 	return (0);*/
 	char	*ptr;
+	int a;
+	int b;
 	
-	printf("%p\n", ptr);
+	a = printf("%p\n", ptr);
+	b = ft_printf("%p\n", ptr);
+	printf("%d\n", a);
+	printf("%d\n", b);
 }
