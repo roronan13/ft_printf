@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/19 14:14:11 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/19 14:25:55 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,8 @@ int	ft_printf(const char *format, ...)
 	return (global_nbr);
 }
 
-int	main(void)
-{
+//int	main(void)
+//{
 /*	char	c;
 	int		a;
 	int		b;
@@ -144,12 +144,12 @@ int	main(void)
 	printf("%d\n", printf("vraie : %d\n", -50));
 	printf("%d\n", ft_printf("moi : %d\n", -50));
 	return (0);*/
-	char	*ptr;
+/* 	char	*ptr;
 	int a;
 	int b;
 	
 	a = printf("%p\n", 0);
 	b = ft_printf("%p\n", 0);
 	printf("%d\n", a);
-	printf("%d\n", b);
-}
+	printf("%d\n", b); */
+//}
