@@ -6,45 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/24 13:28:54 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:50:08 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "stdio.h"
-//#include "stdlib.h"
-
-/* int	parcourir la chaine(va_list, const char*)
-{
-	while (chaine de caractere)
-		if (pourcent+ apres cest un% s, d, i..)
-			on va dans la fonction qui gere chaque pourcent
-		else
-			on ecrit
-	return(nombre de caratceres imprimes)
-} */
-
-/* int	ft_printf(const char *format, ...)
-{
-	va_list arguments
-	int local_nbr
-	va_start()
-	local_nbr = parcourir la chaine
-	va_end
-	return local_nbr
-	
-} */
-
-/* static void	ft_check_sign(char a, int *local_nbr, int *i, va_list ap)
-{
-	if (a == 'c' || a == 's' || a == 'p' || a == 'd' || a == 'i'
-		|| a == 'u' || a == 'x' || a == 'X' || a == '%')
-	{
-		local_nbr = ft_sign(a, local_nbr, ap);
-		i++;
-	}
-	return ;
-} */
 
 static int	ft_sign(char a, va_list ap)
 {
@@ -155,8 +121,8 @@ int	ft_printf(const char *format, ...)
 	
 	/* int	a;
 	int b;
-	a = printf(" NULL %s NULL \n", NULL);
-	b = ft_printf(" NULL %s NULL \n", NULL);
+	a = printf("Hi %s ca va, %d \n", "salut", 13);
+	b = ft_printf("Hi %s ca va, %d \n", "salut", 13);
 	printf("%d\n", a);
 	printf("%d\n", b); */
 //}

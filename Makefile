@@ -18,9 +18,7 @@ OBJS	=	$(SRCS:.c=.o)
 
 CC		=	cc
 
-INCLUDES_PATH	=	includes
-
-CFLAGS	=	-Wall -Wextra -Werror -I$(INCLUDES_PATH)
+CFLAGS	=	-Wall -Wextra -Werror
 
 RM		=	rm -rf
 
