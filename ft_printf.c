@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/24 13:50:08 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/24 14:20:57 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ static int	ft_sign(char a, va_list ap)
 		local_nbr = ft_printf_x_up(va_arg(ap, unsigned int));
 	if (a == '%')
 		local_nbr = ft_printf_percent();
+	else
+	{
+		write(1, "%", 1);
+		local_nbr++;
+	}
 	return (local_nbr);
 }
 
@@ -119,10 +124,10 @@ int	ft_printf(const char *format, ...)
 	printf("%d\n", a);
 	printf("%d\n", b); */
 	
-	/* int	a;
+/* 	int	a;
 	int b;
-	a = printf("Hi %s ca va, %d \n", "salut", 13);
-	b = ft_printf("Hi %s ca va, %d \n", "salut", 13);
+	a = printf("%z\n", 10);
+	b = ft_printf("%z\n", 10);
 	printf("%d\n", a);
-	printf("%d\n", b); */
+	printf("%d\n", b);*/
 //}
