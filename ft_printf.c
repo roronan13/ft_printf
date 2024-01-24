@@ -6,11 +6,12 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/24 14:35:26 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/24 15:02:15 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 static int	ft_sign(char a, va_list ap)
 {
@@ -68,4 +69,15 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(ap);
 	return (global_nbr);
+}
+
+int	main(void)
+{
+	int a;
+	int b;
+
+	a = printf("oui %z allo %d\n", 13);
+	b = ft_printf("oui %z allo %d\n", 13);
+	printf("%d\n", a);
+	printf("%d\n", b);
 }
