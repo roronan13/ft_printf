@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 00:16:30 by rpothier          #+#    #+#             */
-/*   Updated: 2024/01/19 14:33:38 by rpothier         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:28:54 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,6 +150,13 @@ int	ft_printf(const char *format, ...)
 	
 	a = printf("%d\n", -1);
 	b = ft_printf("%d\n", -1);
+	printf("%d\n", a);
+	printf("%d\n", b); */
+	
+	/* int	a;
+	int b;
+	a = printf(" NULL %s NULL \n", NULL);
+	b = ft_printf(" NULL %s NULL \n", NULL);
 	printf("%d\n", a);
 	printf("%d\n", b); */
 //}
